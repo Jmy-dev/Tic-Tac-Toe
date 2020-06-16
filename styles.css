@@ -1,0 +1,64 @@
+    body{
+        height: 100vh;
+        font-family: 'Sriracha', cursive !important;
+        color: #fff!important;
+        background: #141E30;
+        background: -webkit-linear-gradient(to right, #243B55, #141E30);
+        background: linear-gradient(to right, #243B55, #141E30);
+       }
+	h1 {
+        padding-top: 25PX;
+		text-align: center;
+        margin-left: 32%;
+	}
+
+    span{
+        color: #FFC700;
+    }
+
+	table {
+		margin: auto;
+        margin-top: 5%;
+	}
+
+	td {
+        text-align: center;
+		width: 100px;
+		height: 100px;
+        font-size: 50px;
+        color: #FFC700;
+        cursor: default ;
+	}
+
+	.vertical {
+		border-left: 6px solid #919191;
+		border-right: 6px solid #919191;
+	}
+
+	.horizontal {
+		border-top: 6px solid #919191;
+		border-bottom: 6px solid #919191;
+	}
+
+    .btn{
+    margin-top: 15%;
+    margin-left: 33%;
+    }
+    img{
+    height: 437px;
+    width: 529px;
+    }
+    .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 4%;
+
+    }
+    .content{
+    margin-left: 9%;
+    margin-top: 3%;
+    }
+
+ .hide{
+   display:none !important;
+ }
