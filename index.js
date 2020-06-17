@@ -53,9 +53,6 @@ function gameCore(){
     checkWinner(X);
     checkWinner(O);
     checkForDraw();
-
-    // console.log(counter);
-
   }
 }
 }
