@@ -11,13 +11,15 @@ var counter = 0;
 var X  = [];
 var O  = [];
 var header      = document.querySelector(".header");
+var header2      = document.querySelector(".header2");
 var row         = document.querySelector(".rows");
 var blocks = row.children;
 
 //Start
 const play =() =>{
-     winimg.classList.add("hide");
-
+  header2.classList.add("hide");
+  header.classList.remove("hide");
+  winimg.classList.add("hide");
   table.classList.remove("hide");
   resetButton.classList.remove("hide");
   table.classList.add("animate__bounceInDown")
@@ -35,9 +37,11 @@ for(var i = 0 ; i< td.length ; i++){
 function gameCore(){
   if(!finish){
   if(this.textContent == ""){
+    console.log(player.textContent);
     if(player.textContent == "X"){
       this.textContent = "X" ;
       player.textContent = "O";
+      console.log(player.textContent);
       X.push(this.attributes.class.nodeValue);
     }
     else if(player.textContent == "O"){
@@ -80,7 +84,7 @@ function winner(){
  header.textContent = ` ${winnner} wins !!!!`;
  finish = true;
       winimg.classList.remove("hide");
-     ideaimg.classList.add("hide");
+      ideaimg.classList.add("hide");
 
 }
 
