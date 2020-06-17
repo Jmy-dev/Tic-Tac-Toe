@@ -1,9 +1,11 @@
 var td          = document.querySelectorAll("td");
 var resetButton = document.getElementById("reset");
 var table       = document.querySelector("table");
-var playButton = document.getElementById("play");
+var playButton  = document.getElementById("play");
 var player      = document.querySelector(".player");
-var winnner = "Jmy" ;
+var ideaimg     = document.querySelector(".idea");
+var winimg      = document.querySelector(".win");
+var drawimg     = document.querySelector(".draw");
 var finish = true;
 var counter = 0;
 var X  = [];
@@ -14,10 +16,14 @@ var blocks = row.children;
 
 //Start
 const play =() =>{
+     winimg.classList.add("hide");
+
   table.classList.remove("hide");
+  resetButton.classList.remove("hide");
   table.classList.add("animate__bounceInDown")
   finish = false;
   playButton.classList.add("hide");
+
 }
 playButton.addEventListener("click" , play)
 
@@ -64,18 +70,28 @@ function reset(){
   O = [];
   counter = 0;
   header.innerHTML = `Player <span>${player.textContent}</span> your turn`;
+        winimg.classList.add("hide");
+        drawimg.classList.add("hide");
+        ideaimg.classList.remove("hide");
 
 }
 
 function winner(){
  header.textContent = ` ${winnner} wins !!!!`;
  finish = true;
+      winimg.classList.remove("hide");
+     ideaimg.classList.add("hide");
+
 }
 
 function checkForDraw(){
   function draw(){
   header.textContent = "Ohhhh , no body wins!!";
   finish = true;
+     ideaimg.classList.add("hide");
+     drawimg.classList.remove("hide");
+
+
   }
   if(!finish  && counter ===9){
     draw();

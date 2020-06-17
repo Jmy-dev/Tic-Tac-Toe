@@ -15,14 +15,17 @@
        <title> X-O Game</title>
      </head>
      <body>
-        <h1 class="header animate__animated animate__bounceInDown">Player <span class="player">X</span> your turn</h1>
 
             <div class="flex-container container">
-              <div class="animate__animated animate__fadeInLeft">
-                <img src="vector-collages-idea-from-virtual-reality.png"/>
+              <div class="imgcontent animate__animated animate__fadeInLeft">
+                <img class="idea" src="vector-collages-idea-from-virtual-reality.png"/>
+                <img class="win hide" src="cherry-success.png"/>
+                <img class="draw hide" src="flamenco-welcome.png"/>
+
               </div>
 
               <div class="content animate__animated animate__zoomInDown">
+                  <h1 class="header animate__animated animate__bounceInDown">Player <span class="player">X</span> your turn</h1>
                     <table class=" animate__animated hide">
                         <tr class="rows">
                             <td class="1"></td>
@@ -40,8 +43,8 @@
                             <td class="9"></td>
                         </tr>
                     </table>
-                         <button id="play" type="button" class="btn btn-outline-primary animate__animated animate__zoomInUp">Start game</button>
-                         <button id="reset" type="button" class="btn btn-outline-warning animate__animated animate__zoomInUp">Play Again</button>
+                         <button id="play" type="button" class="btn btn-outline-primary animate__animated animate__zoomInUp">Start Game</button>
+                         <button id="reset" type="button" class="hide btn btn-outline-warning animate__animated animate__zoomInUp">Play Again</button>
               </div>
             </div>
 

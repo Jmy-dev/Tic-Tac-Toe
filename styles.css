@@ -1,4 +1,28 @@
-    body{
+@media screen and (max-width: 990px) {
+img{
+height: 380px!important;
+width: 375px!important;
+}
+.btn {
+    margin-left: 25%!important;
+}
+}
+@media screen and (max-width: 770px) {
+.flex-container {
+    flex-direction: column;
+}
+ img{
+    margin-left: 30%!important;
+    height: 200px!important;
+    width: 240px!important;
+ }
+.btn {
+margin-left: 38%!important;
+margin-bottom: 15%;
+}
+}
+
+ body{
         height: 100vh;
         font-family: 'Sriracha', cursive !important;
         color: #fff!important;
@@ -6,43 +30,42 @@
         background: -webkit-linear-gradient(to right, #243B55, #141E30);
         background: linear-gradient(to right, #243B55, #141E30);
        }
-	h1 {
-        padding-top: 25PX;
-		text-align: center;
-        margin-left: 32%;
+	h1{
+        padding-bottom: 30PX;
+	      	text-align: center;
 	}
 
-    span{
+ span{
         color: #FFC700;
     }
 
 	table {
-		margin: auto;
+	      	margin: auto;
         margin-top: 5%;
 	}
 
 	td {
         text-align: center;
-		width: 100px;
-		height: 100px;
+	      	width: 100px;
+	      	height: 100px;
         font-size: 50px;
         color: #FFC700;
         cursor: default ;
 	}
 
 	.vertical {
-		border-left: 6px solid #919191;
-		border-right: 6px solid #919191;
+	  	border-left: 6px solid #919191;
+	  	border-right: 6px solid #919191;
 	}
 
 	.horizontal {
-		border-top: 6px solid #919191;
-		border-bottom: 6px solid #919191;
+	  	border-top: 6px solid #919191;
+	  	border-bottom: 6px solid #919191;
 	}
 
     .btn{
     margin-top: 15%;
-    margin-left: 33%;
+    margin-left: 35%;
     }
     img{
     height: 437px;
@@ -58,7 +81,6 @@
     margin-left: 9%;
     margin-top: 3%;
     }
-
- .hide{
+   .hide{
    display:none !important;
  }
