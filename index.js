@@ -14,7 +14,6 @@ var header      = document.querySelector(".header");
 var header2      = document.querySelector(".header2");
 var row         = document.querySelector(".rows");
 var blocks = row.children;
-
 //Start
 const play =() =>{
   header2.classList.add("hide");
@@ -37,11 +36,9 @@ for(var i = 0 ; i< td.length ; i++){
 function gameCore(){
   if(!finish){
   if(this.textContent == ""){
-    console.log(player.textContent);
     if(player.textContent == "X"){
       this.textContent = "X" ;
       player.textContent = "O";
-      console.log(player.textContent);
       X.push(this.attributes.class.nodeValue);
     }
     else if(player.textContent == "O"){
@@ -53,6 +50,9 @@ function gameCore(){
     checkWinner(X);
     checkWinner(O);
     checkForDraw();
+
+    // console.log(counter);
+
   }
 }
 }
@@ -70,7 +70,8 @@ function reset(){
   X = [];
   O = [];
   counter = 0;
-  header.innerHTML = `Player <span>${player.textContent}</span> your turn`;
+  header2.classList.add('hide');
+  header.classList.remove('hide');
         winimg.classList.add("hide");
         drawimg.classList.add("hide");
         ideaimg.classList.remove("hide");
@@ -78,7 +79,9 @@ function reset(){
 }
 
 function winner(){
- header.textContent = ` ${winnner} wins !!!!`;
+ header.classList.add('hide');
+ header2.classList.remove('hide');
+ header2.textContent = `${winnner} Wins!!`;
  finish = true;
       winimg.classList.remove("hide");
       ideaimg.classList.add("hide");
@@ -87,7 +90,9 @@ function winner(){
 
 function checkForDraw(){
   function draw(){
-  header.textContent = "Ohhhh , no body wins!!";
+    header.classList.add('hide');
+    header2.classList.remove('hide');
+    header2.textContent = `Ohhh NoBody Wins!!`;
   finish = true;
      ideaimg.classList.add("hide");
      drawimg.classList.remove("hide");
